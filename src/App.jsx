@@ -67,7 +67,7 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col">
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 min-h-screen flex flex-col">
       <Navbar 
         onLogoClick={navigateToHome} 
         currentPage={currentPage} 
@@ -103,9 +103,9 @@ const HomePage = ({ onNavigateToDashboard }) => {
       <div className="text-center mt-12">
         <button
           onClick={onNavigateToDashboard}
-          className="bg-gradient-to-r from-[#ED1B2F] to-[#D1152A] text-white px-8 py-4 rounded-xl font-bold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          className="bg-gradient-to-r from-[#ED1B2F] to-purple-600 text-white px-12 py-6 rounded-2xl font-bold text-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 border-2 border-transparent hover:border-purple-400"
         >
-          Enter Learning Dashboard
+          🚀 Enter Learning Dashboard
         </button>
       </div>
     </div>
@@ -117,46 +117,48 @@ const DashboardPage = ({ onRoleSelect, onNavigateToHome }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+        <div className="bg-gradient-to-br from-gray-800 via-purple-800 to-gray-800 rounded-3xl shadow-2xl p-8 mb-8 border border-purple-500/30">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-4xl font-bold text-gray-800 mb-2">Learning Dashboard</h1>
-              <p className="text-gray-600 text-lg">Choose your career path and start your professional journey</p>
+              <h1 className="text-5xl font-bold text-white mb-2 bg-gradient-to-r from-white via-purple-200 to-red-200 bg-clip-text text-transparent">
+                Learning Dashboard
+              </h1>
+              <p className="text-purple-200 text-xl">Choose your career path and start your professional journey</p>
             </div>
             <div className="hidden md:block">
               <div className="grid grid-cols-3 gap-6 text-center">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-xl">
-                  <div className="text-2xl font-bold">6</div>
+                <div className="bg-gradient-to-r from-[#ED1B2F] to-red-600 text-white p-6 rounded-2xl shadow-lg">
+                  <div className="text-3xl font-bold">6</div>
                   <div className="text-sm">Career Paths</div>
                 </div>
-                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-xl">
-                  <div className="text-2xl font-bold">50+</div>
+                <div className="bg-gradient-to-r from-purple-600 to-violet-600 text-white p-6 rounded-2xl shadow-lg">
+                  <div className="text-3xl font-bold">50+</div>
                   <div className="text-sm">Modules</div>
                 </div>
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 rounded-xl">
-                  <div className="text-2xl font-bold">24/7</div>
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-2xl shadow-lg">
+                  <div className="text-3xl font-bold">24/7</div>
                   <div className="text-sm">Support</div>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-4 rounded-xl border border-indigo-200">
-              <h3 className="font-semibold text-indigo-800">Personalized Learning</h3>
-              <p className="text-sm text-indigo-600 mt-1">AI-powered curriculum tailored to your goals</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div className="bg-gradient-to-r from-red-900/50 to-purple-900/50 p-6 rounded-2xl border border-red-500/30 backdrop-blur-sm">
+              <h3 className="font-bold text-red-200 text-lg">🧠 Personalized Learning</h3>
+              <p className="text-sm text-red-100 mt-2">AI-powered curriculum tailored to your goals</p>
             </div>
-            <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-4 rounded-xl border border-emerald-200">
-              <h3 className="font-semibold text-emerald-800">Real-time Progress</h3>
-              <p className="text-sm text-emerald-600 mt-1">Track your advancement with detailed analytics</p>
+            <div className="bg-gradient-to-r from-purple-900/50 to-violet-900/50 p-6 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
+              <h3 className="font-bold text-purple-200 text-lg">📊 Real-time Progress</h3>
+              <p className="text-sm text-purple-100 mt-2">Track your advancement with detailed analytics</p>
             </div>
-            <div className="bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-xl border border-amber-200">
-              <h3 className="font-semibold text-amber-800">Industry Projects</h3>
-              <p className="text-sm text-amber-600 mt-1">Build portfolio with real-world applications</p>
+            <div className="bg-gradient-to-r from-violet-900/50 to-indigo-900/50 p-6 rounded-2xl border border-violet-500/30 backdrop-blur-sm">
+              <h3 className="font-bold text-violet-200 text-lg">💼 Industry Projects</h3>
+              <p className="text-sm text-violet-100 mt-2">Build portfolio with real-world applications</p>
             </div>
-            <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-4 rounded-xl border border-rose-200">
-              <h3 className="font-semibold text-rose-800">Expert Mentorship</h3>
-              <p className="text-sm text-rose-600 mt-1">Get guidance from industry professionals</p>
+            <div className="bg-gradient-to-r from-indigo-900/50 to-red-900/50 p-6 rounded-2xl border border-indigo-500/30 backdrop-blur-sm">
+              <h3 className="font-bold text-indigo-200 text-lg">👨‍🏫 Expert Mentorship</h3>
+              <p className="text-sm text-indigo-100 mt-2">Get guidance from industry professionals</p>
             </div>
           </div>
         </div>
@@ -171,9 +173,9 @@ const DashboardPage = ({ onRoleSelect, onNavigateToHome }) => {
 const TrainingPage = ({ role, completedModules, totalModules, onModuleComplete, onBack }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center justify-between bg-white p-6 rounded-xl shadow-lg mb-6">
+      <div className="flex items-center justify-between bg-gradient-to-r from-gray-800 to-purple-800 p-6 rounded-2xl shadow-xl mb-6 border border-purple-500/30">
         <button
-          className="flex items-center space-x-2 text-[#ED1B2F] hover:bg-red-50 px-4 py-2 rounded-lg transition-colors font-medium"
+          className="flex items-center space-x-3 text-white hover:bg-red-600 px-6 py-3 rounded-xl transition-all font-medium bg-[#ED1B2F] shadow-lg"
           onClick={onBack}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,15 +183,15 @@ const TrainingPage = ({ role, completedModules, totalModules, onModuleComplete, 
           </svg>
           <span>Back to Dashboard</span>
         </button>
-        <div className="flex items-center space-x-2 text-gray-600">
+        <div className="flex items-center space-x-3 text-purple-200">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
           </svg>
-          <span className="text-sm">Dashboard / {role?.title}</span>
+          <span className="text-sm font-medium">Dashboard / {role?.title}</span>
         </div>
       </div>
       
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <TrainingModules
             role={role}
